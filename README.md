@@ -3,7 +3,7 @@ Python script to encrypt text via a Caesar cipher using arbitrary Unicode blocks
 *Warning: It should go without saying that this is NOT a secure encryption method.*
 
 # Introduction
-The [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) 
+The Caesar cipher<sup>[[1]](#ref-caesar-cipher)</sup> 
 is a basic encryption method where each letter in a text is replaced by the nth letter 
 after it in the alphabet.
 If there are fewer than n letters left in the alphabet, 
@@ -11,12 +11,12 @@ the counting continues at the start of the alphabet (see [Examples](#examples)).
 
 # Usage
 This implementation supports using *any* 
-[Unicode block](https://en.wikipedia.org/wiki/Unicode_block) 
+Unicode block<sup>[[2]](#ref-unicode-block)</sup>
 as the "alphabet" (see [Unicode Support](#unicode-support)).
 
 # Implementation
 The cipher is done using
-[modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic),
+modular arithmetic<sup>[[3]](#ref-modular-arithmetic)</sup>,
 where we set A = 0, B = 1, ... Y = 25, and Z = 25.
 Then the Caesar cipher of a character with position `i` shifted by `n`
 is given by:
@@ -26,9 +26,10 @@ is given by:
 ## Unicode Support
 This is most easily explained with an [example](#unicode-support-example). 
 
-Each Unicode character has a corresponding 
-[code point](https://en.wikipedia.org/wiki/Code_point), given by
+Each Unicode character<sup>[[4]](#ref-unicode-character)</sup> has a 
+corresponding code point<sup>[[5]](#ref-code-point)</sup>, given by
 [`ord()`](https://docs.python.org/3/library/functions.html#ord).
+We use this code point and n to determine the resultant shifted character.
 Given a Unicode block with some `length`, starting at `first_code_point`,
 
 [`translate()`](https://docs.python.org/2/library/string.html#string.translate) 
@@ -36,15 +37,6 @@ function to replace each character with its corresponding shifted character.
 
 Python functions [`ord()`](https://docs.python.org/3/library/functions.html#ord) and 
 [`chr()`](https://docs.python.org/3/library/functions.html#chr).
-
-For more information on Unicode code points, see:
-https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin
-
-Each [Unicode character](
-https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin) has a
-corresponding [code point](https://en.wikipedia.org/wiki/Code_point), which is
-given by the Python function `ord()`. We use this code point and n to determine 
-the resultant shifted character.
 
 <a name="examples"></a>
 # Examples 
@@ -178,3 +170,11 @@ We finally translate the original text string to get the ciphered string.
 ```python
 text.translate(translation_table)
 ```
+
+# References
+<a name="ref-caesar-cipher"></a>
+[1] https://en.wikipedia.org/wiki/Caesar_cipher
+[2] https://en.wikipedia.org/wiki/Unicode_block <a name="ref-unicode-block"></a>
+[3] https://en.wikipedia.org/wiki/Modular_arithmetic <a name="ref-modular-arithmetic"></a>
+[4] https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin <a name="ref-unicode-character"></a>
+[5] https://en.wikipedia.org/wiki/Code_point <a name="ref-code-point"></a>
