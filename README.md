@@ -111,9 +111,6 @@ from that character's code point.
 ```python
 ord(char) - start_code_point
 ```
-
-Examples: 
-
 ```python
 >>> ord('A') - start_code_point
 0
@@ -133,8 +130,6 @@ alphabet we loop back to the start.
 (ord(char) - start_code_point + shift) % length
 ```
 
-Examples:
-
 ```python
 >>> (ord('A') - start_code_point + shift) % length
 10
@@ -152,7 +147,7 @@ code point.
 ```python
 chr(((ord(char) - start_code_point + shift) % length) + start_code_point)
 ```
-Examples:
+
 ```python
 >>> ((ord('A') - start_code_point + shift) % length) + start_code_point
 75
