@@ -7,7 +7,7 @@
 import string 
 
 def caesar_cipher(text, n=13, *alphabets):
-    ''' Generalized Caesar cipher of some text.
+    '''Generalized Caesar cipher of some text.
 
     The "Caesar cipher" is a basic encryption method where each letter in a text
     is replaced by nth letter after it in the alphabet. (In another sense, this 
@@ -34,17 +34,18 @@ def caesar_cipher(text, n=13, *alphabets):
     The implementation of the translation table is taken from:
     https://www.tutorialspoint.com/python/string_maketrans.htm
 
-    Args:
+    Parameters:
         text : str
-            the text to shift
+            The text to shift.
         n : int, optional
-            the number of alphabet characters to shift forward by (default: 13)
+            The number of alphabet characters to shift forward by (default: 13).
         *alphabets : tuple(str)
-            the alphabets we are shifting (default is 
-            ('abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+            The alphabets we are shifting (default is 
+            ('abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).
 
     Returns:
         str
+            The ciphered text. 
     '''
 
     if not alphabets:
@@ -63,7 +64,7 @@ def caesar_cipher(text, n=13, *alphabets):
 
 
 def out_table_gen(n, alphabet):
-    '''Creates the  
+    '''Shifts an alphabet forward by n characters. 
 
     Each Unicode character has a corresponding "code point", given by ord(). 
     We use this code point and n to determine the resultant shifted character.
@@ -75,10 +76,15 @@ def out_table_gen(n, alphabet):
     of the alphabet. This is accomplished by treating the code point of the
     first character as 0, 
 
-    n: Integer, the number of characters to shift by
-    charset: String, the character set to shift
+    Parameters:
+        n : int
+            The number of alphabet characters to shift forward by (default: 13).
+        alphabet : str
+            The alphabet to shift.
 
-    Integer, String -> String
+    Returns:
+        str
+            Alphabet shifted forward by n characters.
     '''
     shifted_alphabet = ''
     first_code_point = ord(alphabet[0])
