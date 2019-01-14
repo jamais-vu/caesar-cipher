@@ -19,7 +19,7 @@ of any amount on any union of Unicode blocks.
 
 The core of the project, `cipher_string`, works as described.
 
-Todo:
+Todo (see [Issues](https://github.com/jamais-vu/caesar-cipher/issues)):
 - accept command line arguments
 - `cipher_file` to take a text file as input and write the ciphered text to a new file
 - accept start and end code points of Unicode blocks as arguments, instead of 
