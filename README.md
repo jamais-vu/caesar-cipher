@@ -13,7 +13,9 @@ the counting continues at the start of the alphabet (see [Examples](#examples)).
 
 ## Current Status
 
-`cipher_string` works as described.
+The core of the project, `cipher_string`, works as described.
+
+In the future I will be adding support for text files as input and output.
 
 ## Usage
 
