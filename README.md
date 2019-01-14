@@ -3,7 +3,7 @@
 Python script to encrypt text via a Caesar cipher using arbitrary Unicode blocks.  
 *Warning: It should go without saying that this is NOT a secure encryption method.*
 
-# Introduction
+## Introduction
 
 The Caesar cipher<sup>[[1]](#ref-caesar-cipher)</sup> 
 is a basic encryption method where each letter in a text is replaced by the nth letter 
@@ -11,7 +11,7 @@ after it in the alphabet.
 If there are fewer than n letters left in the alphabet, 
 the counting continues at the start of the alphabet (see [Examples](#examples)).
 
-# Current Status
+## Current Status
 
 `cipher_string` works as described.
 
