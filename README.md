@@ -1,27 +1,41 @@
 # caesar-cipher
 
+![https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/320px-Caesar_cipher_left_shift_of_3.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/320px-Caesar_cipher_left_shift_of_3.svg.png "Caesar cipher with left shift of 3 - Wikipedia")
+
 Python script to encrypt text via a Caesar cipher using arbitrary Unicode blocks.  
 *Warning: It should go without saying that this is NOT a secure encryption method.*
 
 ## Introduction
 
-The Caesar cipher<sup>[[1]](#ref-caesar-cipher)</sup> 
-is a basic encryption method where each letter in a text is replaced by the nth letter 
-after it in the alphabet.
-If there are fewer than n letters left in the alphabet, 
-the counting continues at the start of the alphabet (see [Examples](#examples)).
+`caesar-cipher` is a Python implementation of the 
+Caesar cipher<sup>[[1]](#ref-caesar-cipher)</sup>, a basic encryption method where 
+each letter in a text is shifted in the alphabet by a certain amount.
+
+By default, `caesar-cipher` performs a right-shift of 13 on the lowercase and
+uppercase characters of the English alphabet; however, it can perform shifts
+of any amount on any union of Unicode blocks.
 
 ## Current Status
 
 The core of the project, `cipher_string`, works as described.
 
-In the future I will be adding support for text files as input and output.
+Todo:
+- accept command line arguments
+- `cipher_file` to take a text file as input and write the ciphered text to a new file
+- accept start and end code points of Unicode blocks as arguments, instead of 
+  strings of characters
 
 ## Usage
 
 This implementation supports using *any* 
 Unicode block<sup>[[2]](#ref-unicode-block)</sup>
 as the "alphabet" (see [Unicode Support](#unicode-support)).
+
+**cipher_string**(*text*, *shift*, *alphabets*)
+
+Return a string of the characters in a given string *text*, where each character
+in *text* that is also in the given list of *alphabets* has been shifted forward
+in its respective alphabet by the amount *shift*.
 
 ## Implementation
 
@@ -54,7 +68,7 @@ Python functions [`ord()`](https://docs.python.org/3/library/functions.html#ord)
 
 ### ROT13
 
-ROT13<sup>[[6]](#ref-rot)</sup> is the most popular Caesar cipher. 
+ROT13<sup>[[6]](#ref-rot13)</sup> is the most popular Caesar cipher. 
 ROT13 replaces each letter with the 13th letter after it. 
 With fewer than 13 letters left in the alphabet, the counting continues at A.
 For example:
