@@ -171,6 +171,13 @@ We make a translation table mapping the original alphabet to the shifted alphabe
 translation_table = str.maketrans(original_alphabet, shifted_alphabet)
 ```
 
+This mapping is more obvious if we line the alphabets up like this, 
+where each letter on top is replaced by the letter below it:
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+KLMNOPQRSTUVWXYZABCDEFGHIJ
+```
+
 We finally translate the original text string to get the ciphered string.
 
 ```python
