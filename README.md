@@ -173,8 +173,8 @@ text.translate(translation_table)
 
 # References
 <a name="ref-caesar-cipher"></a>
-[1] https://en.wikipedia.org/wiki/Caesar_cipher
-[2] https://en.wikipedia.org/wiki/Unicode_block <a name="ref-unicode-block"></a>
-[3] https://en.wikipedia.org/wiki/Modular_arithmetic <a name="ref-modular-arithmetic"></a>
-[4] https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin <a name="ref-unicode-character"></a>
+[1] https://en.wikipedia.org/wiki/Caesar_cipher  
+[2] https://en.wikipedia.org/wiki/Unicode_block <a name="ref-unicode-block"></a>  
+[3] https://en.wikipedia.org/wiki/Modular_arithmetic <a name="ref-modular-arithmetic"></a>  
+[4] https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin <a name="ref-unicode-character"></a>  
 [5] https://en.wikipedia.org/wiki/Code_point <a name="ref-code-point"></a>
