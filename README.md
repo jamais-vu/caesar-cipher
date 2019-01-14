@@ -1,20 +1,28 @@
 # caesar-cipher
+
 Python script to encrypt text via a Caesar cipher using arbitrary Unicode blocks.  
 *Warning: It should go without saying that this is NOT a secure encryption method.*
 
 # Introduction
+
 The Caesar cipher<sup>[[1]](#ref-caesar-cipher)</sup> 
 is a basic encryption method where each letter in a text is replaced by the nth letter 
 after it in the alphabet.
 If there are fewer than n letters left in the alphabet, 
 the counting continues at the start of the alphabet (see [Examples](#examples)).
 
-# Usage
+# Current Status
+
+`cipher_string` works as described.
+
+## Usage
+
 This implementation supports using *any* 
 Unicode block<sup>[[2]](#ref-unicode-block)</sup>
 as the "alphabet" (see [Unicode Support](#unicode-support)).
 
-# Implementation
+## Implementation
+
 The cipher is done using
 modular arithmetic<sup>[[3]](#ref-modular-arithmetic)</sup>,
 where we set A = 0, B = 1, ... Y = 25, and Z = 25.
@@ -23,7 +31,8 @@ is given by:
 `(i + n) mod 26`
 
 <a name="unicode-support"></a>
-## Unicode Support
+### Unicode Support
+
 This is most easily explained with an [example](#unicode-support-example). 
 
 Each Unicode character<sup>[[4]](#ref-unicode-character)</sup> has a 
@@ -39,9 +48,10 @@ Python functions [`ord()`](https://docs.python.org/3/library/functions.html#ord)
 [`chr()`](https://docs.python.org/3/library/functions.html#chr).
 
 <a name="examples"></a>
-# Examples 
+## Examples 
 
 ### ROT13
+
 ROT13<sup>[[6]](#ref-rot)</sup> is the most popular Caesar cipher. 
 ROT13 replaces each letter with the 13th letter after it. 
 With fewer than 13 letters left in the alphabet, the counting continues at A.
@@ -72,7 +82,8 @@ Using Unicode code points:
 | z      | 122        | m     | 109        |
 
 <a name="unicode-support-example"></a>
-### Unicode Support
+### Unicode Example
+
 Assume we want to shift all capital letters in a text by 10.
 We use the Unicode block from A to Z as our starting alphabet.
 
@@ -171,7 +182,8 @@ We finally translate the original text string to get the ciphered string.
 text.translate(translation_table)
 ```
 
-# References
+## References
+
 [1] https://en.wikipedia.org/wiki/Caesar_cipher <a name="ref-caesar-cipher"></a>   
 [2] https://en.wikipedia.org/wiki/Unicode_block <a name="ref-unicode-block"></a>  
 [3] https://en.wikipedia.org/wiki/Modular_arithmetic <a name="ref-modular-arithmetic"></a>  
