@@ -42,7 +42,7 @@ Python functions [`ord()`](https://docs.python.org/3/library/functions.html#ord)
 # Examples 
 
 ### ROT13
-[ROT13](https://en.wikipedia.org/wiki/ROT13) is the most popular Caesar cipher. 
+ROT13<sup>[[6]](#ref-rot)</sup> is the most popular Caesar cipher. 
 ROT13 replaces each letter with the 13th letter after it. 
 With fewer than 13 letters left in the alphabet, the counting continues at A.
 For example:
@@ -172,9 +172,9 @@ text.translate(translation_table)
 ```
 
 # References
-<a name="ref-caesar-cipher"></a>
-[1] https://en.wikipedia.org/wiki/Caesar_cipher  
+[1] https://en.wikipedia.org/wiki/Caesar_cipher <a name="ref-caesar-cipher"></a>   
 [2] https://en.wikipedia.org/wiki/Unicode_block <a name="ref-unicode-block"></a>  
 [3] https://en.wikipedia.org/wiki/Modular_arithmetic <a name="ref-modular-arithmetic"></a>  
 [4] https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin <a name="ref-unicode-character"></a>  
-[5] https://en.wikipedia.org/wiki/Code_point <a name="ref-code-point"></a>
+[5] https://en.wikipedia.org/wiki/Code_point <a name="ref-code-point"></a>  
+[6] https://en.wikipedia.org/wiki/ROT13 <a name="ref-rot13"></a>
