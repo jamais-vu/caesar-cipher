@@ -49,19 +49,19 @@ is given by:
 <a name="unicode-support"></a>
 ### Unicode Support
 
-This is most easily explained with an [example](#unicode-support-example). 
-
 Each Unicode character<sup>[[4]](#ref-unicode-character)</sup> has a 
 corresponding code point<sup>[[5]](#ref-code-point)</sup>, given by
 [`ord()`](https://docs.python.org/3/library/functions.html#ord).
-We use this code point and n to determine the resultant shifted character.
-Given a Unicode block with some `length`, starting at `first_code_point`,
-
-[`translate()`](https://docs.python.org/2/library/string.html#string.translate) 
-function to replace each character with its corresponding shifted character.
-
-Python functions [`ord()`](https://docs.python.org/3/library/functions.html#ord) and 
+We use this code point and `n` to determine the resultant shifted code point, 
+with its corresponding Unicode character given by 
 [`chr()`](https://docs.python.org/3/library/functions.html#chr).
+We set the first code point of the Unicode block as 0, then
+use modular arithmetic to determine the shifted character.
+Doing this for the whole block allows us to create a translation table
+and cipher the original text using 
+[`translate()`](https://docs.python.org/2/library/string.html#string.translate) .
+
+This is most easily explained with an [example](#unicode-support-example). 
 
 <a name="examples"></a>
 ## Examples 
