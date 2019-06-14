@@ -25,9 +25,8 @@ def cipher_file(input_file, output_file=None, shift=13,
 def cipher_string(text, shift=13, alphabets=[lowercase, uppercase]):
     """Caesar cipher of some text, with user-customizeable shift and characters.
 
-    Takes a string and replaces each character    
-
-    If only  
+    TODO: Description
+    Takes a string and replaces each character. If only
 
     The implementation of the translation table is taken from:
     https://www.tutorialspoint.com/python/string_maketrans.htm
