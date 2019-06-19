@@ -41,7 +41,7 @@ in its respective alphabet by the amount *shift*.
 
 The cipher is done using
 modular arithmetic<sup>[[3]](#ref-modular-arithmetic)</sup>,
-where we set A = 0, B = 1, ... Y = 25, and Z = 25.
+where we set A = 0, B = 1, ... Y = 24, and Z = 25.
 Then the Caesar cipher of a character with position `i` shifted by `n`
 is given by:
 `(i + n) mod 26`
