@@ -78,8 +78,8 @@ For example:
 | A      | 0        | N     | 13       |
 | B      | 1        | O     | 14       |
 | ...    | ...      | ...   | ...      |
-| Y      | 25       | L     | 12       |
-| Z      | 26       | M     | 13       |
+| Y      | 24       | L     | 12       |
+| Z      | 25       | M     | 13       |
 
 Using Unicode code points:
 
